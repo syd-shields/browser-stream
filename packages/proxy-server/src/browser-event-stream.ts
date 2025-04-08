@@ -563,7 +563,7 @@ export class BrowserEventStream extends EventEmitter {
                                 id: element.id,
                                 className: element.className,
                                 type: (element as BrowserInputElement).type || null,
-                                value: (element as BrowserInputElement).value || null,
+                                value: null,
                                 checked: (element as BrowserInputElement).checked,
                                 placeholder: (element as BrowserInputElement).placeholder,
                                 name: (element as BrowserInputElement).name,
@@ -609,19 +609,11 @@ export class BrowserEventStream extends EventEmitter {
                             type: string;
                             element: ElementDetails;
                             timestamp: number;
-                            value?: string;
-                            checked?: boolean;
                         } = {
                             type,
                             element: details,
                             timestamp: Date.now(),
                         };
-
-                        // Add additional data based on event type
-                        if (type === 'input' || type === 'change') {
-                            eventData.value = (element as BrowserInputElement).value;
-                            eventData.checked = (element as BrowserInputElement).checked;
-                        }
 
                         // Report via console for the proxy to intercept
                         console.info(
