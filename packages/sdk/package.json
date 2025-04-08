@@ -1,0 +1,42 @@
+{
+    "name": "@browser-stream/sdk",
+    "version": "0.1.0",
+    "description": "SDK for interacting with Browserbase browser event proxy server",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc -w",
+        "test": "jest",
+        "lint": "eslint src --ext .ts",
+        "format": "prettier --write \"src/**/*.ts\""
+    },
+    "dependencies": {
+        "@browser-stream/proxy-server": "workspace:*",
+        "ws": "^8.16.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20.11.24",
+        "@types/ws": "^8.5.10",
+        "@typescript-eslint/eslint-plugin": "^7.1.1",
+        "@typescript-eslint/parser": "^7.1.1",
+        "eslint": "^8.57.0",
+        "jest": "^29.7.0",
+        "prettier": "^3.2.5",
+        "ts-jest": "^29.1.2",
+        "typescript": "^5.3.3"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "keywords": [
+        "browserbase",
+        "sdk",
+        "websocket",
+        "browser",
+        "automation"
+    ],
+    "author": "",
+    "license": "MIT"
+}

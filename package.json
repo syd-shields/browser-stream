@@ -1,0 +1,17 @@
+{
+    "name": "browser-stream",
+    "version": "0.0.0",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "./scripts/test",
+        "build": "./scripts/build"
+    },
+    "devDependencies": {
+        "@types/node": "^22.14.0",
+        "eslint": "^9.24.0",
+        "eslint-config-prettier": "^10.1.1",
+        "prettier": "^3.5.3",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.29.1"
+    }
+}
