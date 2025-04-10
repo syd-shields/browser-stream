@@ -18,6 +18,8 @@ async function main() {
         console.log(`Proxy server listening on port ${PORT}`);
         console.log('Connecting to browser...');
         await proxyServer.connectToBrowser('your-browserbase-session-id', 'your-browserbase-api-key');
+        // for local use, you can use the following line instead:
+        // await proxyServer.connectToBrowser();
     });
 
     // Example of handling server shutdown
